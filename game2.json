@@ -1,0 +1,147 @@
+{
+	"objects": [
+		{
+			"id": "Ground 1",
+			"position": {
+				"x": 0.0,
+				"y": 0.0
+			},
+			"size": {
+				"w": 10000,
+				"h": 25
+			}
+		},
+		{
+			"id": "Platform 1",
+			"position": {
+				"x": 100.0,
+				"y": 100.0
+			},
+			"size": {
+				"w": 100,
+				"h": 15
+			}
+		},
+		{
+			"id": "Platform 2",
+			"position": {
+				"x": 250.0,
+				"y": 200.0
+			},
+			"size": {
+				"w": 300,
+				"h": 15
+			}
+		},
+		{
+			"id": "Platform 3",
+			"position": {
+				"x": 1000.0,
+				"y": 300.0
+			},
+			"size": {
+				"w": 100,
+				"h": 15
+			}
+		},
+		{
+			"id": "Platform 4",
+			"position": {
+				"x": 900.0,
+				"y": 250.0
+			},
+			"size": {
+				"w": 100,
+				"h": 15
+			}
+		}
+	],
+	"goombas": [
+		{
+			"id": "Goomba 1",
+			"position": {
+				"x": 300.0,
+				"y": 200.0
+			},
+			"size": {
+				"w": 30,
+				"h": 25
+			}
+		}
+	],
+	"koopas": [
+		{
+			"id": "Koopa 1",
+			"position": {
+				"x": 350.0,
+				"y": 15.0
+			},
+			"size": {
+				"w": 25,
+				"h": 25
+			}
+		}
+	],
+	"bulletbills": [
+		{
+			"id": "BB 1",
+			"position": {
+				"x": 450.0,
+				"y": 50.0
+			},
+			"size": {
+				"w": 30,
+				"h": 20
+			}
+		}
+	],
+	"mushrooms": [
+		{
+			"id": "Mushroom 1",
+			"position": {
+				"x": 400.0,
+				"y": 25.0
+			},
+			"size": {
+				"w": 25,
+				"h": 25
+			}
+		}
+	],
+	"fireflowers": [
+		{
+			"id": "Flower 1",
+			"position": {
+				"x": 450.0,
+				"y": 25.0
+			},
+			"size": {
+				"w": 30,
+				"h": 25
+			}
+		}
+	],
+	"coins": [
+		{
+			"id": "Coin 1",
+			"position": {
+				"x": 500.0,
+				"y": 25.0
+			},
+			"size": {
+				"w": 10,
+				"h": 20
+			}
+		}
+	],
+	"mario": {
+		"starting position": {
+			"x": 10.0,
+			"y": 100.0
+		},
+		"size": {
+			"w": 21,
+			"h": 37
+		}
+	}
+}

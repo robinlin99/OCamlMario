@@ -1,0 +1,11 @@
+Gameplay Directions
+
+'a' and 'd' move left and right respectively. 
+Mouse button jumps. A higher jump can be achieved by holding the mouse 
+  button longer. 
+To fire fireballs while in Fire Mario form, press the shift key in 
+  conjunction with any of 'w' 'a' 's' 'd' or 'e'
+Jump on enemies to kill them. 
+'q' to quit, death and winning auto-quit the game. 
+Die by running into enemies or falling off the map.
+Win by reaching the end of the level.

@@ -1,0 +1,12 @@
+#require "ounit2";;
+#require "yojson";;
+#require "ANSITerminal";;
+#require "graphics";;
+#directory "_build";;
+#load "input.cmo";;
+#load "display.cmo";;
+#load "physics.cmo";;
+#load "gamestate.cmo";;
+#load "sprite.cmo";;
+#load "ai.cmo";;
+#load "parse.cmo";;

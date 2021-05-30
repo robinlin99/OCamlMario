@@ -1,0 +1,31 @@
+{
+  "objects": [
+    {
+      "id": "Ground 1",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "size": {
+        "w": 10,
+        "h": 10
+      }
+    }
+  ],
+  "goombas": [],
+  "koopas": [],
+  "bulletbills": [],
+  "mushrooms": [],
+  "fireflowers": [],
+  "coins": [],
+  "mario": {
+    "starting position": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "size": {
+      "w": 21,
+      "h": 37
+    }
+  }
+}

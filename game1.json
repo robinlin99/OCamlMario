@@ -1,0 +1,81 @@
+{
+	"objects": [
+		{
+			"id": "Ground 1",
+			"position": {
+				"x": 0.0,
+				"y": 0.0
+			},
+			"size": {
+				"w": 400,
+				"h": 25
+			}
+		},
+		{
+			"id": "Ground 2",
+			"position": {
+				"x": 600.0,
+				"y": 0.0
+			},
+			"size": {
+				"w": 400,
+				"h": 25
+			}
+		},
+		{
+			"id": "Platform 1",
+			"position": {
+				"x": 100.0,
+				"y": 100.0
+			},
+			"size": {
+				"w": 100,
+				"h": 15
+			}
+		},
+		{
+			"id": "Platform 2",
+			"position": {
+				"x": 250.0,
+				"y": 200.0
+			},
+			"size": {
+				"w": 300,
+				"h": 15
+			}
+		},
+		{
+			"id": "Wall",
+			"position": {
+				"x": 800.0,
+				"y": 25.0
+			},
+			"size": {
+				"w": 30,
+				"h": 100
+			}
+		},
+		{
+			"id": "High Wall",
+			"position": {
+				"x": 600.0,
+				"y": 300.0
+			},
+			"size": {
+				"w": 50,
+				"h": 15
+			}
+		}
+	],
+	"enemies": [],
+	"mario": {
+		"starting position": {
+			"x": 10.0,
+			"y": 100.0
+		},
+		"size": {
+			"w": 21,
+			"h": 37
+		}
+	}
+}
