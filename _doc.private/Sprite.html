@@ -1,0 +1,396 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Input.html">
+<link rel="next" href="Gamestate.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Main" rel="Chapter" href="Main.html">
+<link title="Author" rel="Chapter" href="Author.html">
+<link title="Display" rel="Chapter" href="Display.html">
+<link title="Physics" rel="Chapter" href="Physics.html">
+<link title="Input" rel="Chapter" href="Input.html">
+<link title="Sprite" rel="Chapter" href="Sprite.html">
+<link title="Gamestate" rel="Chapter" href="Gamestate.html">
+<link title="Ai" rel="Chapter" href="Ai.html">
+<link title="Parse" rel="Chapter" href="Parse.html"><title>Sprite</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Input.html" title="Input">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Gamestate.html" title="Gamestate">Next</a>
+</div>
+<h1>Module <a href="type_Sprite.html">Sprite</a></h1>
+
+<pre><span id="MODULESprite"><span class="keyword">module</span> Sprite</span>: <code class="code">sig</code> <a href="Sprite.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p><code class="code">mario_type</code> is the different types of mario</p>
+
+<p>Module that handles characters that can move with hit box</p>
+</div>
+</div>
+<hr width="100%">
+
+<pre><code><span id="TYPEmario_type"><span class="keyword">type</span> <code class="type"></code>mario_type</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmario_type.SmolMario"><span class="constructor">SmolMario</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmario_type.SuperMario"><span class="constructor">SuperMario</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmario_type.FireMario"><span class="constructor">FireMario</span></span></code></td>
+
+</tr></table>
+
+<div class="info ">
+<div class="info-desc">
+<p><code class="code">mario_type</code> is the different types of mario</p>
+</div>
+</div>
+
+
+<pre><code><span id="TYPEpwr_up"><span class="keyword">type</span> <code class="type"></code>pwr_up</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTpwr_up.Mushroom"><span class="constructor">Mushroom</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTpwr_up.FireFlower"><span class="constructor">FireFlower</span></span></code></td>
+
+</tr></table>
+
+<div class="info ">
+<div class="info-desc">
+<p><code class="code">pwr_up</code> is the different types of powerup</p>
+
+<p><code class="code">pwr_up</code> is the different types of powerup</p>
+</div>
+</div>
+
+
+<pre><code><span id="TYPEsprite"><span class="keyword">type</span> <code class="type"></code>sprite</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsprite.Mario"><span class="constructor">Mario</span></span> <span class="keyword">of</span> <code class="type"><a href="Sprite.html#TYPEmario_type">mario_type</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsprite.Goomba"><span class="constructor">Goomba</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsprite.Object"><span class="constructor">Object</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsprite.Koopa"><span class="constructor">Koopa</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsprite.KoopaShell"><span class="constructor">KoopaShell</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsprite.Fireball"><span class="constructor">Fireball</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsprite.Coin"><span class="constructor">Coin</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsprite.BulletBill"><span class="constructor">BulletBill</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsprite.Powerup"><span class="constructor">Powerup</span></span> <span class="keyword">of</span> <code class="type"><a href="Sprite.html#TYPEpwr_up">pwr_up</a></code></code></td>
+
+</tr></table>
+
+<div class="info ">
+<div class="info-desc">
+<p><code class="code">sprite</code> is the different types of sprites there are</p>
+
+<p><code class="code">sprite</code> is the different types of sprites there are. Object does not
+   move</p>
+</div>
+</div>
+
+
+<pre><code><span id="TYPEpoint"><span class="keyword">type</span> <code class="type"></code>point</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTpoint.x">x</span>&nbsp;: <code class="type">float</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTpoint.y">y</span>&nbsp;: <code class="type">float</code>;</code></td>
+
+</tr></table>
+<code>}</code>
+
+<div class="info ">
+<div class="info-desc">
+<p><code class="code">point</code> is a record representing a point (x, y)</p>
+</div>
+</div>
+
+
+<pre><code><span id="TYPEhitbox"><span class="keyword">type</span> <code class="type"></code>hitbox</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELThitbox.lower_left">lower_left</span>&nbsp;: <code class="type"><a href="Sprite.html#TYPEpoint">point</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELThitbox.width">width</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELThitbox.height">height</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr></table>
+<code>}</code>
+
+<div class="info ">
+<div class="info-desc">
+<p><code class="code">hitbox</code> is a hitbox for a sprite</p>
+
+<p><code class="code">hitbox</code> is a hitbox for a sprite</p>
+</div>
+</div>
+
+
+<pre><code><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span class="keyword">mutable&nbsp;</span><span id="TYPEELTt.kind">kind</span>&nbsp;: <code class="type"><a href="Sprite.html#TYPEsprite">sprite</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span class="keyword">mutable&nbsp;</span><span id="TYPEELTt.pos">pos</span>&nbsp;: <code class="type"><a href="Sprite.html#TYPEpoint">point</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span class="keyword">mutable&nbsp;</span><span id="TYPEELTt.vel">vel</span>&nbsp;: <code class="type"><a href="Sprite.html#TYPEpoint">point</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.size">size</span>&nbsp;: <code class="type">int * int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span class="keyword">mutable&nbsp;</span><span id="TYPEELTt.alive">alive</span>&nbsp;: <code class="type">bool</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span class="keyword">mutable&nbsp;</span><span id="TYPEELTt.coins">coins</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span class="keyword">mutable&nbsp;</span><span id="TYPEELTt.inv_time">inv_time</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span class="keyword">mutable&nbsp;</span><span id="TYPEELTt.fire_time">fire_time</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr></table>
+<code>}</code>
+
+<div class="info ">
+<div class="info-desc">
+<p>AF: this represents a sprite, such that most fields are protected</p>
+
+<p>Representation type of sprites</p>
+</div>
+</div>
+
+
+<pre><span id="VALposition"><span class="keyword">val</span> position</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> <a href="Sprite.html#TYPEpoint">point</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">position t</code> is the current position of this sprite</p>
+</div>
+</div>
+
+<pre><span id="VALvelocity"><span class="keyword">val</span> velocity</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> <a href="Sprite.html#TYPEpoint">point</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">velocity t</code> is the current velocity</p>
+</div>
+</div>
+
+<pre><span id="VALsize"><span class="keyword">val</span> size</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> int * int</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">size t</code> is the current size of this sprite</p>
+</div>
+</div>
+
+<pre><span id="VALcoins"><span class="keyword">val</span> coins</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> int</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">coins t</code> is the current ammount of coins</p>
+</div>
+</div>
+
+<pre><span id="VALis_alive"><span class="keyword">val</span> is_alive</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">is_alive t</code> is true if the sprite is alive, false if it is dead. For
+   objects and projectiles this is false when it becomes irrelvant and
+   should be removed from memory.</p>
+</div>
+</div>
+
+<pre><span id="VALcan_fire"><span class="keyword">val</span> can_fire</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">can_fire t</code> is true if Mario can fire a fireball</p>
+</div>
+</div>
+
+<pre><span id="VALkill"><span class="keyword">val</span> kill</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">kill t</code> kills the sprite such that <code class="code">is_alive t</code> after will return
+   false</p>
+</div>
+</div>
+
+<pre><span id="VALgot_coin"><span class="keyword">val</span> got_coin</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> <a href="Sprite.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">got_coin t</code> gives the sprite 1 more coin if the sprite can have
+   coins</p>
+</div>
+</div>
+
+<pre><span id="VALpower_up"><span class="keyword">val</span> power_up</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> <a href="Sprite.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">power_up t pwr</code> gives the sprite t the power up pwr if t can be
+   powerd up</p>
+</div>
+</div>
+
+<pre><span id="VALcollision"><span class="keyword">val</span> collision</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> <a href="Sprite.html#TYPEhitbox">hitbox</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">collision t</code> is the current hitbox of this sprite</p>
+</div>
+</div>
+
+<pre><span id="VALspritetype"><span class="keyword">val</span> spritetype</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> <a href="Sprite.html#TYPEsprite">sprite</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">chartype t</code> is the type of sprite stored</p>
+</div>
+</div>
+
+<pre><span id="VALupdate_position"><span class="keyword">val</span> update_position</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> <a href="Sprite.html#TYPEpoint">point</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">update_position t</code> changes the position of the sprite</p>
+</div>
+</div>
+
+<pre><span id="VALupdate_velocity"><span class="keyword">val</span> update_velocity</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> <a href="Sprite.html#TYPEpoint">point</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">update_velocity t</code> changes the velocity of the sprite</p>
+</div>
+</div>
+
+<pre><span id="VALfire"><span class="keyword">val</span> fire</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">fire t</code> fires a fireball if the sprite can</p>
+</div>
+</div>
+
+<pre><span id="VALtick_timers"><span class="keyword">val</span> tick_timers</span> : <code class="type"><a href="Sprite.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">tick_timers t</code> ticks any timers on the character</p>
+</div>
+</div>
+
+<pre><span id="VALmake"><span class="keyword">val</span> make</span> : <code class="type"><a href="Sprite.html#TYPEsprite">sprite</a> -> <a href="Sprite.html#TYPEpoint">point</a> -> int -> int -> <a href="Sprite.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">make c p w h</code> is a new sprite of type <code class="code">c</code> with their bottom left
+   corner at <code class="code">p</code> and a witdth of <code class="code">w</code> and a height of <code class="code">h</code></p>
+</div>
+</div>
+</body></html>

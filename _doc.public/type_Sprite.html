@@ -1,0 +1,52 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Main" rel="Chapter" href="Main.html">
+<link title="Author" rel="Chapter" href="Author.html">
+<link title="Display" rel="Chapter" href="Display.html">
+<link title="Physics" rel="Chapter" href="Physics.html">
+<link title="Input" rel="Chapter" href="Input.html">
+<link title="Sprite" rel="Chapter" href="Sprite.html">
+<link title="Gamestate" rel="Chapter" href="Gamestate.html">
+<link title="Ai" rel="Chapter" href="Ai.html">
+<link title="Parse" rel="Chapter" href="Parse.html"><title>Sprite</title>
+</head>
+<body>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;mario_type&nbsp;=&nbsp;<span class="constructor">SmolMario</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">SuperMario</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">FireMario</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;pwr_up&nbsp;=&nbsp;<span class="constructor">Mushroom</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">FireFlower</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;sprite&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Mario</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Sprite</span>.mario_type<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Goomba</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Object</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Koopa</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">KoopaShell</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Fireball</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Coin</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">BulletBill</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Powerup</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Sprite</span>.pwr_up<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;point&nbsp;=&nbsp;{&nbsp;x&nbsp;:&nbsp;float;&nbsp;y&nbsp;:&nbsp;float;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;hitbox&nbsp;=&nbsp;{&nbsp;lower_left&nbsp;:&nbsp;<span class="constructor">Sprite</span>.point;&nbsp;width&nbsp;:&nbsp;int;&nbsp;height&nbsp;:&nbsp;int;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;position&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Sprite</span>.point<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;velocity&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Sprite</span>.point<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;size&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;*&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;coins&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_alive&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;kill&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;power_up&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;got_coin&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;update_position&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Sprite</span>.point&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;update_velocity&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Sprite</span>.point&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;collision&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Sprite</span>.hitbox<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;spritetype&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Sprite</span>.sprite<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;tick_timers&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;can_fire&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fire&nbsp;:&nbsp;<span class="constructor">Sprite</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;make&nbsp;:&nbsp;<span class="constructor">Sprite</span>.sprite&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Sprite</span>.point&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Sprite</span>.t<br>
+<span class="keyword">end</span></code></body></html>

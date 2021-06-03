@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Author.html">
+<link rel="next" href="Physics.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Main" rel="Chapter" href="Main.html">
+<link title="Author" rel="Chapter" href="Author.html">
+<link title="Display" rel="Chapter" href="Display.html">
+<link title="Physics" rel="Chapter" href="Physics.html">
+<link title="Input" rel="Chapter" href="Input.html">
+<link title="Sprite" rel="Chapter" href="Sprite.html">
+<link title="Gamestate" rel="Chapter" href="Gamestate.html">
+<link title="Ai" rel="Chapter" href="Ai.html">
+<link title="Parse" rel="Chapter" href="Parse.html"><title>Display</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Author.html" title="Author">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Physics.html" title="Physics">Next</a>
+</div>
+<h1>Module <a href="type_Display.html">Display</a></h1>
+
+<pre><span id="MODULEDisplay"><span class="keyword">module</span> Display</span>: <code class="code">sig</code> <a href="Display.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p>Module that handles drawing of all Sprites and the background</p>
+</div>
+</div>
+<hr width="100%">
+
+<pre><span id="VALdraw_goomba"><span class="keyword">val</span> draw_goomba</span> : <code class="type">int -> int -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_goomba x y</code> draws a goomba sprite at x position <code class="code">x</code> and y
+    position <code class="code">y</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_object"><span class="keyword">val</span> draw_object</span> : <code class="type">int -> int -> int -> int -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_object x y w h</code> draws a wall sprite with width <code class="code">w</code> and height
+    <code class="code">h</code> at x position <code class="code">x</code> and y position <code class="code">y</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_cloud"><span class="keyword">val</span> draw_cloud</span> : <code class="type">int -> int -> <a href="Gamestate.html#TYPEt">Gamestate.t</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_cloud x y gs</code> draws a cloud at x position <code class="code">x</code> and y position
+    <code class="code">y</code> with gamestate <code class="code">gs</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_mario_sprite"><span class="keyword">val</span> draw_mario_sprite</span> : <code class="type">int -> int -> <a href="Sprite.html#TYPEmario_type">Sprite.mario_type</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_mario_sprite x y kind</code> draws a mario at x position <code class="code">x</code> and y
+    position <code class="code">y</code> with the type <code class="code">kind</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_fireball_sprite"><span class="keyword">val</span> draw_fireball_sprite</span> : <code class="type">int -> int -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_fireball_sprite x y</code> draws a fireball at x position <code class="code">x</code> and y
+    position <code class="code">y</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_koopa"><span class="keyword">val</span> draw_koopa</span> : <code class="type">int -> int -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_koopa x y</code> draws a koopa facing the right direction at x
+    position <code class="code">x</code> and y position <code class="code">y</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_koopa_shell_sprite"><span class="keyword">val</span> draw_koopa_shell_sprite</span> : <code class="type">int -> int -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_koopa_shell_sprite x y</code> draws a koopa shell at x position <code class="code">x</code>
+    and y position <code class="code">y</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_coin"><span class="keyword">val</span> draw_coin</span> : <code class="type">int -> int -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_coin x y</code> draws a coin at x position <code class="code">x</code> and y position <code class="code">y</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_bulletbill"><span class="keyword">val</span> draw_bulletbill</span> : <code class="type">int -> int -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_bulletbill x y</code> draws a bulletbill at x position <code class="code">x</code> and y
+    position <code class="code">y</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_fireflower"><span class="keyword">val</span> draw_fireflower</span> : <code class="type">int -> int -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_fireflower x y</code> draws a fireflower at x position <code class="code">x</code> and y
+    position <code class="code">y</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_mushroom"><span class="keyword">val</span> draw_mushroom</span> : <code class="type">int -> int -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_mushroom x y</code> draws a mushroom at x position <code class="code">x</code> and y
+    position <code class="code">y</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_background"><span class="keyword">val</span> draw_background</span> : <code class="type">int -> int -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_background x y</code> draws the background image at x position <code class="code">x</code>
+    and y position <code class="code">y</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_a"><span class="keyword">val</span> draw_a</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_b"><span class="keyword">val</span> draw_b</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_c"><span class="keyword">val</span> draw_c</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_d"><span class="keyword">val</span> draw_d</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_e"><span class="keyword">val</span> draw_e</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_f"><span class="keyword">val</span> draw_f</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_g"><span class="keyword">val</span> draw_g</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_h"><span class="keyword">val</span> draw_h</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_i"><span class="keyword">val</span> draw_i</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_j"><span class="keyword">val</span> draw_j</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_k"><span class="keyword">val</span> draw_k</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_l"><span class="keyword">val</span> draw_l</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_m"><span class="keyword">val</span> draw_m</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_n"><span class="keyword">val</span> draw_n</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_o"><span class="keyword">val</span> draw_o</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_p"><span class="keyword">val</span> draw_p</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_q"><span class="keyword">val</span> draw_q</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_r"><span class="keyword">val</span> draw_r</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_s"><span class="keyword">val</span> draw_s</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_t"><span class="keyword">val</span> draw_t</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_u"><span class="keyword">val</span> draw_u</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_v"><span class="keyword">val</span> draw_v</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_w"><span class="keyword">val</span> draw_w</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_x"><span class="keyword">val</span> draw_x</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_y"><span class="keyword">val</span> draw_y</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_z"><span class="keyword">val</span> draw_z</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_colon"><span class="keyword">val</span> draw_colon</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_text_of_string"><span class="keyword">val</span> draw_text_of_string</span> : <code class="type">int -> int -> string -> int -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_text_of_string x y text size</code> draws the text represented by
+    <code class="code">text</code> starting at position x position <code class="code">x</code> and y position <code class="code">y</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_one"><span class="keyword">val</span> draw_one</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_two"><span class="keyword">val</span> draw_two</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_three"><span class="keyword">val</span> draw_three</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_four"><span class="keyword">val</span> draw_four</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_five"><span class="keyword">val</span> draw_five</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_six"><span class="keyword">val</span> draw_six</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_seven"><span class="keyword">val</span> draw_seven</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_eight"><span class="keyword">val</span> draw_eight</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_nine"><span class="keyword">val</span> draw_nine</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_zero"><span class="keyword">val</span> draw_zero</span> : <code class="type">int -> int -> int -> unit</code></pre>
+<pre><span id="VALdraw_string_of_number"><span class="keyword">val</span> draw_string_of_number</span> : <code class="type">int -> int -> string -> int -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_string_of_number x y num size</code> draws the numbers represented
+    by <code class="code">num</code> starting at position x position <code class="code">x</code> and y position <code class="code">y</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_sprite"><span class="keyword">val</span> draw_sprite</span> : <code class="type"><a href="Sprite.html#TYPEt">Sprite.t</a> -> <a href="Gamestate.html#TYPEt">Gamestate.t</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_sprite s gs</code> draws the sprite <code class="code">s</code> with a gamestate of <code class="code">gs</code></p>
+</div>
+</div>
+
+<pre><span id="VALdraw_score"><span class="keyword">val</span> draw_score</span> : <code class="type"><a href="Gamestate.html#TYPEt">Gamestate.t</a> -> unit</code></pre>
+<pre><span id="VALdraw_win_message"><span class="keyword">val</span> draw_win_message</span> : <code class="type"><a href="Gamestate.html#TYPEt">Gamestate.t</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_win_message gs</code> draws the winning message</p>
+</div>
+</div>
+
+<pre><span id="VALdraw_loss_message"><span class="keyword">val</span> draw_loss_message</span> : <code class="type">unit -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_loss_message ()</code> draws the losing message</p>
+</div>
+</div>
+
+<pre><span id="VALdraw_sprites"><span class="keyword">val</span> draw_sprites</span> : <code class="type"><a href="Gamestate.html#TYPEt">Gamestate.t</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">draw_sprites gs</code> draws the sprites inside gamestate of <code class="code">gs</code></p>
+</div>
+</div>
+
+<pre><span id="VALupdate_frame"><span class="keyword">val</span> update_frame</span> : <code class="type"><a href="Gamestate.html#TYPEt">Gamestate.t</a> -> int -> int -> int -> int -> <a href="Gamestate.html#TYPEt">Gamestate.t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">update_frame gamestate max_width margin_left margin_right screen_width</code>
+    updates the rendered positions of objects due to player's motion</p>
+</div>
+</div>
+
+<pre><span id="VALrender_state"><span class="keyword">val</span> render_state</span> : <code class="type"><a href="Gamestate.html#TYPEt">Gamestate.t</a> -> int -> int -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">render_state gamestate max_width max_height</code> renders the entire
+    game on the screen</p>
+</div>
+</div>
+</body></html>
